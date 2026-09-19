@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        body {
+            background-color: mediumorchid;
+            font-family: serif;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: gold;
+        }
+        a {
+        float: left;
+        color: forestgreen;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 16px;
+        }
+        a:hover {
+            background-color: powderblue;
+        }
+        .active {
+            background-color: navy;
+            color: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+     <a class="active" href="#home">Home</a>
+     <a href="#about">About</a>
+     <a href="#gallery">Gallery</a>
+     <a href="#contact">Contact Us</a>
+    </div>
+
+    <section>
+        <img class="myslides"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoZorEGel5SfT3KhjzJoNHeDsD9sCrBJM5FxPLfjRzLA&s"
+            style="width: 500px; height: 500px;">
+            <img class="myslides"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6jz7cqbdtn5loarWfExN2W4xkyGwZfdsAuqEDLZKWguu9yhzEBmne_ros&s=10"
+                style="width: 500px; height: 500px;">
+            <img class="myslides"
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwjBLHcLNcoSDdiFP3u0T_ObqLo2iVq88uyc6wMoTwmA&s"
+                style="width: 500px; height: 500px;">
+                <img class="myslides"
+                    src="https://www.shutterstock.com/image-photo/closeup-pakistani-500-rupee-note-260nw-2517662609.jpg"
+                    style="width: 500px; height: 500px;">
+    </section>
+    <script>
+        var myindex=0
+        carousel()
+
+        function carousel() {
+            var i
+            var x = document.getElementsByClassName ("myslides")
+            for (i=0; i<x.length; i++) {
+                x[i].style.display="none"
+            }
+            myindex++
+            if (myindex>x.length) {
+                myindex=1
+            }
+            x[myindex-1].style.display="block"
+            setTimeout (carousel, 3000)
+        }
+    </script>
+</body>
+</html>
